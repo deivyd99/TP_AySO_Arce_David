@@ -1,0 +1,265 @@
+pwd
+ll
+mkdir clase 4
+ll
+rmdir clase/
+ll
+mkdir clase_4
+ll
+cd clase_4/
+ll
+cat > texto_1.txt
+ll
+cat texto_1.txt 
+cat << FIN > texto_2.txt
+linea 3
+linea 4
+linea 5
+linea 6
+FIN
+
+ll
+cat texto_2.txt 
+cat *.txt
+cat texto_1.txt >> texto_2.txt 
+cat texto_2.txt 
+cat >> texto_1.txt 
+cat texto_1.txt 
+cat << EOF > texto_3.txt
+linea 7
+linea 8
+linea 9
+EOF
+
+ll
+cat texto_1.txt texto_3.txt > texto_4.txt
+ll
+cat texto_4.txt 
+echo hola > hola.txt
+ll
+cat hola.txt 
+echo chau >> hola.txt 
+cat hola.txt 
+grep chau hola.txt 
+grep 3 texto_4.txt 
+grep 3 texto_4.txt > filtro_3.txt
+ll
+cat filtro_3.txt 
+history
+history > mi_hostorial.txt
+ll
+cd ../
+pwd
+tree
+apt  install tree
+sudo apt  install tree
+ll
+cd clase_4/
+ll
+../
+pwd
+exit
+tree
+snap install tree
+sudo snap install tree
+tree
+cd clase_4/
+touch texto_5.txt
+ls -l
+mv mi_hostorial.txt /home/vagrant
+ls -l
+ls -l /home/vagrant
+cd ../
+cp mi_hostorial.txt clase_4/
+cd clase_4/
+ll
+mv mi_hostorial_copia.txt 
+ll
+mv mi_hostorial.txt mi_hostorial_copia.txt 
+ll
+cd ../
+ll
+rm mi_hostorial.txt 
+ll
+rm clase_4/
+rm -r clase_4/
+ls-l
+ls -l
+pwd
+mkdir dir_1 dir_2 dir_3
+tree
+mkdir -p dog_1/dog_2/dog_3
+tree
+clear
+mkdir -p {clase_1,clase_2}/{teoria,practica} 
+tree
+mdir -p {nvo_dir_1/subdir{1..5},nvo_dir_2/{subdir{1..5,subdir_adicional}}
+mkdir -p {nvo_dir_1/subdir{1..5},nvo_dir_2/{subdir{1..5,subdir_adicional}}
+tree
+mkdir -p {compra1/vendedor{1..3},compra2/{vendedor{1..3},repositor}}
+ll
+tree
+rm -m \{nvo_dir_1/
+rm -r {nvo_dir_1/
+tree
+cat /etc/passwd
+cat /etc/group
+cat /etc/shadow
+sudo cat /etc/shadow
+pwd
+groupadd Alumnos
+sudo groupadd Alumnos
+cat /etc/group
+useradd -m -s /bin/bash -c "Alumno Polux" -G Alumnos Polux
+sudo useradd -m -s /bin/bash -c "Alumno Polux" -G Alumnos Polux
+cat /etc/passwd
+cat /etc/group
+passwd Polux
+sudo passwd Polux
+su Polux
+history > historial_clase_4.txt
+cat historial_clase_4.txt 
+exit
+ll
+tree
+man rm
+mkdir clase_5
+ll
+cd clase_5
+ll
+echo prueba
+echo prueba > texto_1.txt
+cat texto_1.txt 
+ls -l
+chmod 666 texto_1.txt 
+ls -l
+chmod 764 texto_1.txt 
+ls -l
+echo  prueba2 > texto_2.txt
+ls -l
+chmod 644 texto_2.txt 
+ls -l
+cd ..
+ll
+chmod -R 777 clase_5/
+ls -l
+cd clase_5
+ls -l
+echo scripteando flama
+echo funcionó piola 
+cat << FIN > script_1
+pwd
+ls -l
+echo scripteando flama
+echo funcionó piola
+FIN
+
+ls -l
+bash  script_1 
+vim script_2.sh
+ll
+ls -l
+chmod 764 script_2.sh 
+ls -l
+./script_2.sh 
+cd ..
+pwd
+ssh-keygen -t ed25519
+cat $HOME/.ssh/*.pub
+ll
+ls -la repogit/
+pwd
+cd repogit/
+git clone git@github.com:deivyd99/TP_AySO_Arce_David.git
+ls -l
+ls -l TP_AySO_Arce_David/
+cd TP_AySO_Arce_David/
+ll
+cat /etc/os-release 
+git status
+grep -i Home_url /etc/os-release > datos_url.txt
+ll
+git status
+cat datos_url.txt 
+git add .
+git status
+git commit -m "Subo el archivo datos_url"
+git config --global user.email "david-arce99@hotmail.com.ar"
+git config --global user.name "deivyd99"
+git commit -m "Subo el archivo datos_url"
+git status
+git push
+exit
+ll
+rm dir_1/
+rm -r dir_1/
+rm -r dir_2/
+rm -r dir_3/
+rm -r dog_1/
+ll
+rm -r 4/
+rm -r compra1/
+rm -r compra2/
+ll
+rm -r clase_1/
+rm -r clase_2/
+rm -r clase_5/
+ll
+cd repogit/
+ll
+cd TP_AySO_Arce_David/
+ll
+git status
+echo “Usuario=$(whoami)” > datos_usuario.txt
+ll
+cat datos_usuario.txt 
+ll
+git status
+grep "model name" /proc/cpuinfo | head -n1 
+grep "model name" /proc/cpuinfo | tail -n1 
+grep "model name" /proc/cpuinfo | head -n1 >> datos_usuario.txt 
+cat datos_usuario.txt 
+git status
+git add .
+git commit -m "feat: Añadiendo información de CPU"
+git push
+ls
+ll
+cat README.md 
+cat << EOF >> README.md 
+Alumno: David Arce
+División: 114
+Turno: Mañana
+EOF
+
+git add README.md datos_usuario.txt 
+git commit -m "ADD: Añadiendo Readme y datos de usuario"
+git push
+man mkdir
+mkdir -p {materia1,materia2}/uni{1..3}
+tree
+vim script_dir.sh
+ll
+chmod 755 script_dir.sh 
+ll
+./script_dir.sh 
+ll
+tree
+./script_dir.sh 
+tree
+rm -r materia1
+rm -r materia2
+ll
+./script_dir.sh 
+ll
+git status
+git add .
+git commit -m "ADD: Añadiendo script"
+git push
+ll
+history -a
+history 
+history -a
+cat ~/.bash_history
+man history
+history -a >> $HOME/.bash_history
